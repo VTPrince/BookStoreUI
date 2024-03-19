@@ -31,5 +31,11 @@ module.exports = {
   ],
   devServer: {
     port: 3020,
+    proxy: [
+      {
+        context: ['/book'],
+        target: 'https://localhost:5088',
+      },
+    ],
   },
 };
